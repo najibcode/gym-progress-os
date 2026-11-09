@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, ShieldCheck, FileSpreadsheet } from 'lucide-react';
 import { PRODUCT, handleCheckoutRedirect } from '../constants/product';
 import { LegalModal } from './LegalModal';
+import { BrandLogo } from './BrandLogo';
 
 export const Footer: React.FC = () => {
   const [legalModalType, setLegalModalType] = useState<'privacy' | 'terms' | 'refund' | 'contact' | null>(null);
@@ -15,19 +16,7 @@ export const Footer: React.FC = () => {
             
             {/* Brand Column */}
             <div className="md:col-span-5 space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#151B21] border border-[#28312C] flex items-center justify-center">
-                  <span className="w-2.5 h-2.5 rounded-sm bg-[#B7FF35]"></span>
-                </div>
-                <div>
-                  <div className="font-heading font-bold text-base text-[#F5F7F2] tracking-wider uppercase">
-                    {PRODUCT.brand}
-                  </div>
-                  <div className="text-[10px] font-mono text-[#737D76]">
-                    Fitness Architecture & Systems
-                  </div>
-                </div>
-              </div>
+              <BrandLogo size="md" />
 
               <p className="text-xs text-[#A1AAA3] leading-relaxed max-w-sm">
                 “Tools designed to help you track your progress.” Built for trainees who value measurement, progressive overload, and long-term results.

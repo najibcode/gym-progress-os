@@ -1,10 +1,11 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, Shield, Sparkles, TrendingUp, Award, Activity, Database } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Sparkles, Database } from 'lucide-react';
 import { PRODUCT, CORE_BENEFITS, handleCheckoutRedirect } from '../constants/product';
+import { LiveDashboardMockup } from './LiveDashboardMockup';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#080A0D]">
+    <section className="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-[#080A0D]">
       {/* Background Radial Glow & Texture */}
       <div 
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#B7FF35]/10 rounded-full blur-[140px] pointer-events-none -z-10"
@@ -99,7 +100,7 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* RIGHT COLUMN: Realistic Premium Product Showcase */}
+          {/* RIGHT COLUMN: Pixel-Perfect Proportional Live Dashboard UI (No Generic Images) */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
               
@@ -109,84 +110,8 @@ export const Hero: React.FC = () => {
                 aria-hidden="true"
               />
 
-              {/* Main Card Frame */}
-              <div className="relative rounded-2xl bg-[#101419] border border-[#28312C] p-3 sm:p-4 shadow-2xl overflow-hidden">
-                
-                {/* Mockup Titlebar (Excel Window Header) */}
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#28312C] px-1">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80"></div>
-                    <span className="ml-2 font-mono text-[11px] text-[#A1AAA3] font-medium truncate max-w-[190px] sm:max-w-none">
-                      Gym_Progress_OS_Ultimate_v2.xlsx
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1.5 bg-[#151B21] px-2 py-0.5 rounded border border-[#28312C]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#B7FF35] animate-pulse"></span>
-                    <span className="text-[10px] font-mono font-medium text-[#B7FF35] uppercase">v2.0 Active</span>
-                  </div>
-                </div>
-
-                {/* Primary Workbook Screenshot */}
-                <div className="relative rounded-xl overflow-hidden bg-[#080A0D] border border-[#28312C] aspect-[16/10] group">
-                  <img
-                    src="/assets/images/gym-cover.webp"
-                    alt="GYM PROGRESS OS Dashboard Preview showing workout metrics, volume charts and strength records"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    width={768}
-                    height={480}
-                    loading="eager"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080A0D] via-transparent to-transparent opacity-60"></div>
-                  
-                  {/* Floating Metric Badge 1 (Volume) */}
-                  <div className="absolute bottom-3 left-3 bg-[#151B21]/90 backdrop-blur-md border border-[#28312C] rounded-lg p-2.5 flex items-center gap-3 shadow-lg">
-                    <div className="w-8 h-8 rounded bg-[#B7FF35]/15 border border-[#B7FF35]/30 flex items-center justify-center text-[#B7FF35]">
-                      <TrendingUp className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-[10px] uppercase font-mono text-[#737D76]">Total Volume</div>
-                      <div className="text-xs font-bold text-[#F5F7F2]">4,835 kg <span className="text-[#45D483] text-[10px]">+12.4%</span></div>
-                    </div>
-                  </div>
-
-                  {/* Floating Metric Badge 2 (PR) */}
-                  <div className="absolute top-3 right-3 bg-[#151B21]/90 backdrop-blur-md border border-[#28312C] rounded-lg p-2.5 flex items-center gap-2.5 shadow-lg">
-                    <div className="w-7 h-7 rounded bg-[#8DDB25]/15 border border-[#8DDB25]/30 flex items-center justify-center text-[#B7FF35]">
-                      <Award className="w-3.5 h-3.5" />
-                    </div>
-                    <div>
-                      <div className="text-[10px] uppercase font-mono text-[#737D76]">Bench e1RM</div>
-                      <div className="text-xs font-bold text-[#B7FF35]">80.0 kg PR</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Quick Interactive Ribbon: Real Sheet Tabs Preview */}
-                <div className="mt-3 pt-2.5 border-t border-[#28312C] flex items-center justify-between text-[11px] font-mono text-[#737D76] overflow-x-auto gap-2 no-scrollbar">
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <span className="px-2 py-0.5 rounded bg-[#1B232B] text-[#B7FF35] border border-[#28312C]">Dashboard</span>
-                    <span className="px-2 py-0.5 rounded bg-[#151B21] text-[#A1AAA3] hover:text-[#F5F7F2]">Workout Log</span>
-                    <span className="px-2 py-0.5 rounded bg-[#151B21] text-[#A1AAA3] hover:text-[#F5F7F2]">Overload</span>
-                    <span className="px-2 py-0.5 rounded bg-[#151B21] text-[#A1AAA3] hover:text-[#F5F7F2]">PR Board</span>
-                    <span className="px-2 py-0.5 rounded bg-[#151B21] text-[#A1AAA3] hover:text-[#F5F7F2]">Plates</span>
-                  </div>
-                  <span className="text-[10px] text-[#A1AAA3] shrink-0 font-medium">+10 more sheets</span>
-                </div>
-
-              </div>
-
-              {/* Sub-card: Live Micro Health Pill */}
-              <div className="mt-3 bg-[#151B21] border border-[#28312C] rounded-xl p-3 flex items-center justify-between text-xs">
-                <div className="flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-[#45D483]" />
-                  <span className="text-[#A1AAA3]">Readiness Score (Sleep + Recovery):</span>
-                </div>
-                <span className="font-mono font-bold text-[#45D483] bg-[#45D483]/10 px-2 py-0.5 rounded border border-[#45D483]/20">
-                  88 / 100
-                </span>
-              </div>
+              {/* Native Live Dashboard Mockup */}
+              <LiveDashboardMockup />
 
             </div>
           </div>

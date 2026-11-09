@@ -5,3 +5,4 @@
   <circle cx="25" cy="10" r="2.5" fill="#B7FF35"/>
   <path d="M19 10H25V16" stroke="#B7FF35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+

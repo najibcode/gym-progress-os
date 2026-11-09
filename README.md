@@ -195,3 +195,4 @@ The landing page is engineered for clean Meta (Facebook & Instagram) ad attribut
 ## 8. License
 
 © 2026 PROGRESS LAB. All rights reserved.
+

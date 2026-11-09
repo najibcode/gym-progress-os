@@ -3,9 +3,6 @@ import {
   Dumbbell, 
   TrendingUp, 
   Trophy, 
-  Layout, 
-  Layers, 
-  Calendar, 
   Calculator, 
   HeartPulse, 
   Apple, 
@@ -14,17 +11,7 @@ import {
   Check
 } from 'lucide-react';
 import { WORKBOOK_MODULES, PRODUCT, handleCheckoutRedirect } from '../constants/product';
-
-const moduleIcons: Record<string, React.ReactNode> = {
-  "Central Workout Log": <Dumbbell className="w-5 h-5 text-[#B7FF35]" />,
-  "Progressive Overload Tracker": <TrendingUp className="w-5 h-5 text-[#B7FF35]" />,
-  "Personal Records (PR) Board": <Trophy className="w-5 h-5 text-[#B7FF35]" />,
-  "Executive Analytics Dashboard": <Layout className="w-5 h-5 text-[#B7FF35]" />,
-  "Workout Split & Mesocycle Planner": <Calendar className="w-5 h-5 text-[#B7FF35]" />,
-  "Plate & Warm-Up Calculator": <Calculator className="w-5 h-5 text-[#B7FF35]" />,
-  "Body Measurements & BMI Tracker": <Layers className="w-5 h-5 text-[#B7FF35]" />,
-  "Nutrition, Macros & Readiness Tracker": <HeartPulse className="w-5 h-5 text-[#B7FF35]" />,
-};
+import { FeatureModulePreview } from './FeatureModulePreview';
 
 export const Features: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -126,27 +113,9 @@ export const Features: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Genuine Screenshot Preview */}
+            {/* Right Native Interactive Sheet Preview (Zero Screenshot Clutter) */}
             <div className="lg:col-span-7">
-              <div className="relative rounded-2xl overflow-hidden bg-[#080A0D] border border-[#28312C] shadow-2xl group">
-                <div className="p-3 bg-[#1B232B] border-b border-[#28312C] flex items-center justify-between text-xs font-mono text-[#A1AAA3]">
-                  <div className="flex items-center gap-2">
-                    {moduleIcons[WORKBOOK_MODULES[activeTab].name] || <Layout className="w-4 h-4 text-[#B7FF35]" />}
-                    <span className="font-semibold text-[#F5F7F2]">{WORKBOOK_MODULES[activeTab].name}</span>
-                  </div>
-                  <span className="text-[10px] text-[#737D76]">Genuine Product Asset</span>
-                </div>
-
-                <div className="aspect-[16/10] overflow-hidden bg-[#080A0D] relative">
-                  <img
-                    src={WORKBOOK_MODULES[activeTab].screenshot}
-                    alt={`${WORKBOOK_MODULES[activeTab].name} interface screenshot`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080A0D]/60 via-transparent to-transparent pointer-events-none"></div>
-                </div>
-              </div>
+              <FeatureModulePreview moduleName={WORKBOOK_MODULES[activeTab].name} />
             </div>
 
           </div>
@@ -231,3 +200,4 @@ export const Features: React.FC = () => {
     </section>
   );
 };
+

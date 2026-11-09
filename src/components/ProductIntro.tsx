@@ -1,8 +1,66 @@
-import React from 'react';
-import { LayoutDashboard, Target, Zap, LineChart, ShieldCheck, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { 
+  Cpu, 
+  ArrowRight, 
+  Sparkles
+} from 'lucide-react';
 import { PRODUCT, handleCheckoutRedirect } from '../constants/product';
 
 export const ProductIntro: React.FC = () => {
+  const [activeStage, setActiveStage] = useState<number>(0);
+
+  const stages = [
+    {
+      title: '01. Raw Logging Input',
+      desc: 'You enter just three numbers: Weight, Reps, and Reps In Reserve (RIR).',
+      tag: 'Zero Friction',
+      preview: {
+        title: 'Central Workout Log',
+        rows: [
+          { col1: 'Bench Press', col2: 'Chest', col3: '80.0 kg', col4: '6 reps', col5: 'RIR 1' },
+          { col1: 'Incline DB Press', col2: 'Chest', col3: '32.0 kg', col4: '8 reps', col5: 'RIR 2' },
+          { col1: 'Barbell Row', col2: 'Back', col3: '75.0 kg', col4: '8 reps', col5: 'RIR 2' },
+        ],
+      },
+    },
+    {
+      title: '02. Real-Time Math Engine',
+      desc: 'Formulas cross-reference the Exercise Library and calculate volume & estimated 1RM instantly.',
+      tag: '100% Automated',
+      preview: {
+        title: 'Formula Processor',
+        formulas: [
+          { name: 'Estimated 1RM (e1RM)', formula: '= Weight * (1 + Reps / 30)', result: '96.0 kg' },
+          { name: 'Set Volume Load', formula: '= Weight * Reps * Sets', result: '1,440 kg' },
+          { name: 'Muscle Group Lookup', formula: '= XLOOKUP(Exercise, Library, MuscleGroup)', result: 'Chest' },
+        ],
+      },
+    },
+    {
+      title: '03. Progressive Overload Detection',
+      desc: 'Compares your latest session with your baseline history to confirm strength progression.',
+      tag: 'Continuous Gains',
+      preview: {
+        title: 'Overload Comparator',
+        comparison: [
+          { metric: 'First Session e1RM', val: '76.7 kg', date: 'Session 1' },
+          { metric: 'Latest Session e1RM', val: '80.0 kg', date: 'Session 12' },
+          { metric: 'Net Strength Gain', val: '+4.3 kg (+5.6%)', status: 'Upward Trend' },
+          { metric: 'Suggested Next Load', val: '82.5 kg (+2.5 kg)', status: 'Auto-Calculated' },
+        ],
+      },
+    },
+    {
+      title: '04. Executive Dashboard & AI Prompt',
+      desc: 'Rolls up weekly sets per muscle group and formats data ready for ChatGPT/Claude analysis.',
+      tag: 'Intelligence Hub',
+      preview: {
+        title: 'Weekly AI Analysis Generator',
+        promptText: '"Analyze my gym progress using the data below. Focus on trends, consistency, strength progression, volume by muscle group, and suggest adjustments for next week..."',
+      },
+    },
+  ];
+
   return (
     <section className="py-20 md:py-28 bg-[#080A0D] relative overflow-hidden" id="preview">
       {/* Background Glow */}
@@ -16,8 +74,8 @@ export const ProductIntro: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#151B21] border border-[#28312C] text-[#B7FF35] text-xs font-mono font-medium tracking-wider uppercase mb-4">
-            <LayoutDashboard className="w-3.5 h-3.5 text-[#B7FF35]" />
-            <span>EXECUTIVE SPREADSHEET ARCHITECTURE</span>
+            <Cpu className="w-3.5 h-3.5 text-[#B7FF35]" />
+            <span>HOW THE SYSTEM OPERATES</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#F5F7F2] uppercase tracking-tight leading-tight">
             MEET YOUR NEW <span className="text-[#B7FF35]">GYM TRACKING SYSTEM.</span>
@@ -27,88 +85,152 @@ export const ProductIntro: React.FC = () => {
           </p>
         </div>
 
-        {/* Feature Callouts Around Centerpiece Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+        {/* Native Architecture Pipeline (Zero Image Placeholders) */}
+        <div className="bg-[#101419] border border-[#28312C] rounded-3xl p-6 sm:p-10 mb-16 shadow-2xl">
           
-          {/* Left Feature Callouts */}
-          <div className="lg:col-span-3 space-y-6 order-2 lg:order-1">
-            <div className="bg-[#151B21] border border-[#28312C] p-5 rounded-xl hover:border-[#B7FF35]/40 transition-colors">
-              <div className="w-8 h-8 rounded-lg bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-3">
-                <Target className="w-4 h-4" />
-              </div>
-              <h3 className="font-heading font-bold text-base text-[#F5F7F2] mb-1">
-                Progressive Overload Engine
-              </h3>
-              <p className="text-xs text-[#A1AAA3] leading-relaxed">
-                Automated formulas compare your baseline session to your latest workout. Always know if you gained strength.
-              </p>
-            </div>
-
-            <div className="bg-[#151B21] border border-[#28312C] p-5 rounded-xl hover:border-[#B7FF35]/40 transition-colors">
-              <div className="w-8 h-8 rounded-lg bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-3">
-                <Zap className="w-4 h-4" />
-              </div>
-              <h3 className="font-heading font-bold text-base text-[#F5F7F2] mb-1">
-                Personal Records (PR) Board
-              </h3>
-              <p className="text-xs text-[#A1AAA3] leading-relaxed">
-                Every top set is analyzed to detect new peak weights, max reps, and estimated 1-Rep Max milestones.
-              </p>
-            </div>
-          </div>
-
-          {/* Center Showcase Mockup (Large Screenshot) */}
-          <div className="lg:col-span-6 order-1 lg:order-2">
-            <div className="relative rounded-2xl bg-[#101419] border border-[#28312C] p-3 sm:p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
-              <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#28312C] text-xs font-mono text-[#737D76]">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#B7FF35]"></span>
-                  <span className="text-[#F5F7F2] font-semibold">MAIN DASHBOARD</span>
-                </div>
-                <span>Excel 2026 Compatible</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left Stages Selector */}
+            <div className="lg:col-span-5 space-y-3">
+              <div className="text-xs font-mono text-[#B7FF35] font-semibold uppercase tracking-wider mb-2">
+                4-Stage Data Pipeline Architecture:
               </div>
               
-              <div className="relative rounded-xl overflow-hidden border border-[#28312C] aspect-[16/11]">
-                <img
-                  src="/assets/images/gym-cover.webp"
-                  alt="GYM PROGRESS OS Central Dashboard showing key lifts, volume calculations, and PR trackers"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080A0D]/70 via-transparent to-transparent"></div>
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-[#F5F7F2] bg-[#080A0D]/80 backdrop-blur-md px-3 py-2 rounded-lg border border-[#28312C]">
-                  <span>Log once. Understand everything.</span>
-                  <span className="text-[#B7FF35] font-semibold">15 Interlinked Sheets</span>
+              {stages.map((stage, idx) => {
+                const isActive = activeStage === idx;
+                return (
+                  <div
+                    key={idx}
+                    onClick={() => setActiveStage(idx)}
+                    className={`cursor-pointer p-4 rounded-xl border transition-all duration-200 text-left ${
+                      isActive
+                        ? 'bg-[#151B21] border-[#B7FF35] shadow-[0_0_15px_rgba(183,255,53,0.15)]'
+                        : 'bg-[#101419] border-[#28312C] hover:border-[#35423B]'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className={`font-heading font-bold text-sm ${isActive ? 'text-[#F5F7F2]' : 'text-[#A1AAA3]'}`}>
+                        {stage.title}
+                      </span>
+                      <span className={`text-[10px] font-mono px-2 py-0.5 rounded font-medium ${
+                        isActive ? 'bg-[#B7FF35] text-[#080A0D]' : 'bg-[#1B232B] text-[#737D76]'
+                      }`}>
+                        {stage.tag}
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#737D76] leading-relaxed">
+                      {stage.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Right Live Stage Interactive Engine Visualizer */}
+            <div className="lg:col-span-7 bg-[#151B21] border border-[#28312C] rounded-2xl p-5 sm:p-6 shadow-xl">
+              <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#28312C] text-xs font-mono">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#B7FF35] animate-pulse"></span>
+                  <span className="text-[#F5F7F2] font-bold uppercase">{stages[activeStage].preview.title}</span>
                 </div>
+                <span className="text-[#737D76]">Live Sheet Simulation</span>
               </div>
-            </div>
-          </div>
 
-          {/* Right Feature Callouts */}
-          <div className="lg:col-span-3 space-y-6 order-3">
-            <div className="bg-[#151B21] border border-[#28312C] p-5 rounded-xl hover:border-[#B7FF35]/40 transition-colors">
-              <div className="w-8 h-8 rounded-lg bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-3">
-                <LineChart className="w-4 h-4" />
-              </div>
-              <h3 className="font-heading font-bold text-base text-[#F5F7F2] mb-1">
-                Volume & Set Analytics
-              </h3>
-              <p className="text-xs text-[#A1AAA3] leading-relaxed">
-                Breakdown of weekly training sets across chest, back, shoulders, arms, quads, and hamstrings to prevent junk volume.
-              </p>
+              {/* Stage 0: Raw Logging */}
+              {activeStage === 0 && (
+                <div className="space-y-3">
+                  <div className="text-[11px] font-mono text-[#A1AAA3] mb-2">
+                    Enter one row per set — muscle group and volume auto-compute:
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left font-mono text-xs">
+                      <thead>
+                        <tr className="border-b border-[#28312C] text-[#737D76] text-[10px] uppercase">
+                          <th className="pb-2">Exercise</th>
+                          <th className="pb-2">Muscle</th>
+                          <th className="pb-2">Weight</th>
+                          <th className="pb-2">Reps</th>
+                          <th className="pb-2">RIR</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#28312C]/40 text-[#F5F7F2]">
+                        {stages[0].preview.rows?.map((row, rIdx) => (
+                          <tr key={rIdx} className="hover:bg-[#1B232B]/60">
+                            <td className="py-2 font-bold text-[#B7FF35]">{row.col1}</td>
+                            <td className="py-2 text-[#A1AAA3]">{row.col2}</td>
+                            <td className="py-2">{row.col3}</td>
+                            <td className="py-2">{row.col4}</td>
+                            <td className="py-2 text-[#45D483]">{row.col5}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="bg-[#101419] p-3 rounded-lg border border-[#28312C] text-[11px] font-mono text-[#A1AAA3] flex items-center justify-between">
+                    <span>Session Status:</span>
+                    <span className="text-[#B7FF35] font-bold">14 Sets Logged • 8,420 kg Total Volume</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Stage 1: Math Engine */}
+              {activeStage === 1 && (
+                <div className="space-y-3">
+                  <div className="text-[11px] font-mono text-[#A1AAA3] mb-2">
+                    Transparent mathematical formulas running directly in Excel:
+                  </div>
+                  <div className="space-y-2.5">
+                    {stages[1].preview.formulas?.map((f, fIdx) => (
+                      <div key={fIdx} className="bg-[#101419] border border-[#28312C] p-3 rounded-lg font-mono">
+                        <div className="flex items-center justify-between text-xs mb-1">
+                          <span className="text-[#F5F7F2] font-semibold">{f.name}</span>
+                          <span className="text-[#B7FF35] font-bold text-sm">{f.result}</span>
+                        </div>
+                        <div className="text-[10px] text-[#737D76] bg-[#151B21] px-2 py-1 rounded inline-block">
+                          {f.formula}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Stage 2: Progressive Overload */}
+              {activeStage === 2 && (
+                <div className="space-y-3">
+                  <div className="text-[11px] font-mono text-[#A1AAA3] mb-2">
+                    Auto-generated comparison per exercise from your Library:
+                  </div>
+                  <div className="grid grid-cols-2 gap-3 font-mono">
+                    {stages[2].preview.comparison?.map((c, cIdx) => (
+                      <div key={cIdx} className="bg-[#101419] border border-[#28312C] p-3 rounded-lg">
+                        <div className="text-[10px] text-[#737D76] uppercase">{c.metric}</div>
+                        <div className="font-heading font-black text-base text-[#F5F7F2] mt-0.5">{c.val}</div>
+                        <div className="text-[10px] text-[#B7FF35] mt-1">{c.date || c.status}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Stage 3: AI Analysis */}
+              {activeStage === 3 && (
+                <div className="space-y-3">
+                  <div className="text-[11px] font-mono text-[#A1AAA3] mb-2">
+                    Pre-formatted copy-paste prompt dynamically generated for ChatGPT or Claude:
+                  </div>
+                  <div className="bg-[#101419] border border-[#28312C] p-4 rounded-xl font-mono text-xs text-[#B7FF35] leading-relaxed italic">
+                    {stages[3].preview.promptText}
+                  </div>
+                  <div className="flex items-center gap-2 text-[11px] font-mono text-[#737D76]">
+                    <Sparkles className="w-3.5 h-3.5 text-[#B7FF35]" />
+                    <span>Includes weekly volume tables, fatigue scores, and RIR deviations.</span>
+                  </div>
+                </div>
+              )}
+
             </div>
 
-            <div className="bg-[#151B21] border border-[#28312C] p-5 rounded-xl hover:border-[#B7FF35]/40 transition-colors">
-              <div className="w-8 h-8 rounded-lg bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-3">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-              <h3 className="font-heading font-bold text-base text-[#F5F7F2] mb-1">
-                Zero Monthly Subscription
-              </h3>
-              <p className="text-xs text-[#A1AAA3] leading-relaxed">
-                No apps that shut down or charge monthly fees. Your spreadsheet runs 100% offline on your laptop or phone forever.
-              </p>
-            </div>
           </div>
 
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
 import { PRODUCT, handleCheckoutRedirect } from '../constants/product';
+import { BrandLogo } from './BrandLogo';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,9 +17,10 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Features', href: '#features' },
-    { name: 'Workbook Preview', href: '#preview' },
+    { name: 'Architecture', href: '#preview' },
+    { name: 'Interactive Tool', href: '#calculator' },
     { name: 'How It Works', href: '#how-it-works' },
-    { name: 'What’s Included', href: '#pricing' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'FAQ', href: '#faq' },
   ];
 
@@ -26,38 +28,28 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#080A0D]/90 backdrop-blur-md border-b border-[#28312C]/80 py-3 shadow-lg shadow-black/40'
-          : 'bg-transparent border-b border-transparent py-5'
+          ? 'bg-[#080A0D]/95 backdrop-blur-md border-b border-[#28312C] py-3.5 shadow-xl shadow-black/60'
+          : 'bg-[#080A0D]/60 backdrop-blur-sm border-b border-[#28312C]/40 py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo & Symbol */}
+          {/* Official Brand Logo */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF35] rounded-md"
-            aria-label="Progress Lab - Home"
+            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF35] rounded-xl"
+            aria-label="Progress Lab / Progress Club - Home"
           >
-            <div className="w-9 h-9 rounded-lg bg-[#151B21] border border-[#28312C] flex items-center justify-center group-hover:border-[#B7FF35]/50 transition-colors shadow-inner">
-              <span className="w-2.5 h-2.5 rounded-sm bg-[#B7FF35] shadow-[0_0_8px_#B7FF35]"></span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-base tracking-wider text-[#F5F7F2] uppercase">
-                {PRODUCT.brand}
-              </span>
-              <span className="text-[10px] tracking-widest text-[#737D76] uppercase font-mono">
-                {PRODUCT.name}
-              </span>
-            </div>
+            <BrandLogo size="md" />
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+          <nav className="hidden md:flex items-center gap-7" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-[#A1AAA3] hover:text-[#F5F7F2] transition-colors focus:outline-none focus-visible:text-[#B7FF35]"
+                className="text-xs lg:text-sm font-medium text-[#A1AAA3] hover:text-[#B7FF35] transition-colors focus:outline-none focus-visible:text-[#B7FF35]"
               >
                 {link.name}
               </a>
@@ -68,7 +60,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-4">
             <button
               onClick={() => handleCheckoutRedirect('navbar_cta')}
-              className="inline-flex items-center gap-2 bg-[#B7FF35] hover:bg-[#8DDB25] text-[#080A0D] font-heading font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_0_20px_rgba(183,255,53,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF35] active:translate-y-0"
+              className="inline-flex items-center gap-2 bg-[#B7FF35] hover:bg-[#8DDB25] text-[#080A0D] font-heading font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_0_20px_rgba(183,255,53,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF35] active:translate-y-0"
             >
               <span>GET GYM PROGRESS OS — ₹{PRODUCT.price}</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -123,3 +115,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+
