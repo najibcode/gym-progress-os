@@ -49,7 +49,7 @@ export const StickyMobileCTA: React.FC = () => {
         {/* Right: Buy Now Button */}
         <button
           onClick={() => handleCheckoutRedirect('sticky_mobile_bottom_cta')}
-          className="inline-flex items-center justify-center gap-2 bg-[#B7FF35] active:bg-[#8DDB25] text-[#080A0D] font-heading font-extrabold text-xs uppercase tracking-wider py-2.5 px-5 rounded-xl shadow-[0_0_15px_rgba(183,255,53,0.3)] shrink-0"
+          className="min-h-[44px] inline-flex items-center justify-center gap-2 bg-[#B7FF35] active:bg-[#8DDB25] text-[#080A0D] font-heading font-extrabold text-xs uppercase tracking-wider py-2.5 px-5 rounded-xl shadow-[0_0_15px_rgba(183,255,53,0.3)] shrink-0 active:scale-95 transition-transform"
         >
           <Lock className="w-3.5 h-3.5" />
           <span>BUY NOW</span>

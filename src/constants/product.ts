@@ -327,38 +327,26 @@ export const COMPARISON_DATA = [
 export const FAQ_ITEMS = [
   {
     question: "Is this a physical product or a digital download?",
-    answer: "GYM PROGRESS OS is 100% a digital product. It is a professionally engineered Excel workbook (.xlsx file). No physical item will be shipped to your address. You can download and start using it immediately.",
-  },
-  {
-    question: "How do I purchase GYM PROGRESS OS?",
-    answer: "Simply click any 'GET GYM PROGRESS OS' button on this page. You will be redirected directly to our official, secure Razorpay checkout page (https://rzp.io/rzp/gymos), where you can pay using UPI (Google Pay, PhonePe, Paytm), credit/debit cards, or net banking.",
+    answer: "GYM PROGRESS OS is 100% a digital product (.xlsx Excel workbook). No physical item will be shipped. You receive instant download access immediately upon checkout.",
   },
   {
     question: "Is this a recurring subscription or a one-time payment?",
-    answer: "It is strictly a ONE-TIME payment of ₹199. There are zero subscriptions, zero hidden charges, and no recurring monthly fees whatsoever. Once you purchase it, the workbook is yours to keep and use forever.",
+    answer: "It is strictly a ONE-TIME payment of ₹199. There are zero subscriptions, zero hidden charges, and no recurring fees. You own the workbook forever.",
+  },
+  {
+    question: "How do I purchase & what payment methods are accepted?",
+    answer: "Click any 'GET GYM PROGRESS OS' button to open our verified, secure Razorpay checkout page (https://rzp.io/rzp/gymos). We accept UPI (Google Pay, PhonePe, Paytm), all major credit/debit cards, and NetBanking.",
   },
   {
     question: "Do I need advanced Excel skills to use it?",
-    answer: "Not at all! GYM PROGRESS OS is specifically designed for ease of use. All formulas, lookups, and visual summaries are pre-built and automated. You only need to type in your exercise, weight, and reps — the sheet handles all calculations for you.",
-  },
-  {
-    question: "Can beginners use this tracker?",
-    answer: "Yes, absolutely. Whether you are in your first month of lifting or have been training for five years, having an organized log is the fastest way to understand your routine and avoid plateauing.",
+    answer: "None at all! All formulas, lookups, and visual dashboards are pre-coded and fully automated. You only enter your exercise, weight, and reps — the workbook handles all calculations automatically.",
   },
   {
     question: "Can I use it on my smartphone?",
-    answer: "Yes. You can open and edit the workbook on your phone using the free Microsoft Excel app (iOS and Android) or the Google Sheets app. For the best initial setup and chart viewing experience, desktop or tablet is recommended.",
+    answer: "Yes! The workbook works smoothly on mobile using the free Microsoft Excel app (iOS and Android) or the Google Sheets app. For initial setup and detailed chart viewing, desktop or tablet is recommended.",
   },
   {
     question: "How do I receive the workbook after payment?",
-    answer: "Immediately after completing your transaction on the Razorpay checkout page, you will be directed to your download link and receive confirmation details so you can save the .xlsx file directly to your device or cloud drive.",
-  },
-  {
-    question: "Does using this workbook automatically build muscle?",
-    answer: "No. GYM PROGRESS OS is a precise tracking and organization tool. It makes progressive overload visible and measurable, but your results depend entirely on your training consistency, effort, nutrition, and recovery.",
-  },
-  {
-    question: "Can I customize the exercises or add my own splits?",
-    answer: "Yes. The workbook includes an open Exercise Library and Workout Planner tab where you can add custom exercises, modify muscle categories, and tailor the workout splits to your exact routine.",
+    answer: "Immediately after your ₹199 payment is completed on the Razorpay page, you will be redirected to your instant download link and receive confirmation details to save the file directly to your device or Google Drive.",
   },
 ];

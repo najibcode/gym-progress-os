@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Dumbbell, 
-  TrendingUp, 
-  Trophy, 
-  Calculator, 
-  HeartPulse, 
-  Apple, 
   Sparkles, 
   ArrowRight,
   Check
@@ -122,74 +116,11 @@ export const Features: React.FC = () => {
 
         </div>
 
-        {/* 6 Grid Feature Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          <div className="bg-[#151B21] border border-[#28312C] p-6 rounded-2xl hover:border-[#B7FF35]/30 transition-all">
-            <div className="w-10 h-10 rounded-xl bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-4">
-              <Dumbbell className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading font-bold text-lg text-[#F5F7F2] mb-2">01. Workout Log</h4>
-            <p className="text-sm text-[#A1AAA3] leading-relaxed">
-              Record date, exercises, sets, repetitions, weights, and Reps In Reserve (RIR). Total training volume computes instantly.
-            </p>
-          </div>
-
-          <div className="bg-[#151B21] border border-[#28312C] p-6 rounded-2xl hover:border-[#B7FF35]/30 transition-all">
-            <div className="w-10 h-10 rounded-xl bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-4">
-              <TrendingUp className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading font-bold text-lg text-[#F5F7F2] mb-2">02. Progressive Overload</h4>
-            <p className="text-sm text-[#A1AAA3] leading-relaxed">
-              Monitor improvements in training performance and keep track of increasing training loads without keeping mental notes.
-            </p>
-          </div>
-
-          <div className="bg-[#151B21] border border-[#28312C] p-6 rounded-2xl hover:border-[#B7FF35]/30 transition-all">
-            <div className="w-10 h-10 rounded-xl bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-4">
-              <Trophy className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading font-bold text-lg text-[#F5F7F2] mb-2">03. Personal Records</h4>
-            <p className="text-sm text-[#A1AAA3] leading-relaxed">
-              Maintain a live record of all-time personal bests, estimated 1RMs, and key performance milestones with exact dates.
-            </p>
-          </div>
-
-          <div className="bg-[#151B21] border border-[#28312C] p-6 rounded-2xl hover:border-[#B7FF35]/30 transition-all">
-            <div className="w-10 h-10 rounded-xl bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-4">
-              <Calculator className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading font-bold text-lg text-[#F5F7F2] mb-2">04. Plate & Warm-Up Math</h4>
-            <p className="text-sm text-[#A1AAA3] leading-relaxed">
-              Input target working weight and get immediate barbell side loading (20kg, 15kg, 10kg, etc.) and a 5-step warm-up ramp.
-            </p>
-          </div>
-
-          <div className="bg-[#151B21] border border-[#28312C] p-6 rounded-2xl hover:border-[#B7FF35]/30 transition-all">
-            <div className="w-10 h-10 rounded-xl bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-4">
-              <HeartPulse className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading font-bold text-lg text-[#F5F7F2] mb-2">05. Recovery & Readiness</h4>
-            <p className="text-sm text-[#A1AAA3] leading-relaxed">
-              Check in daily with sleep hours, quality, muscle soreness, and energy levels to calculate a composite readiness score (0-100).
-            </p>
-          </div>
-
-          <div className="bg-[#151B21] border border-[#28312C] p-6 rounded-2xl hover:border-[#B7FF35]/30 transition-all">
-            <div className="w-10 h-10 rounded-xl bg-[#1B232B] border border-[#28312C] flex items-center justify-center text-[#B7FF35] mb-4">
-              <Apple className="w-5 h-5" />
-            </div>
-            <h4 className="font-heading font-bold text-lg text-[#F5F7F2] mb-2">06. Nutrition & Protein Scaling</h4>
-            <p className="text-sm text-[#A1AAA3] leading-relaxed">
-              Log daily calories and macros. Protein targets automatically scale up or down based on your latest logged bodyweight.
-            </p>
-          </div>
-        </div>
-
-        {/* Mid-Page Strategic CTA */}
+        {/* Strategic Mid-Page CTA */}
         <div className="text-center">
           <button
             onClick={() => handleCheckoutRedirect('features_bottom_cta')}
-            className="inline-flex items-center gap-3 bg-[#B7FF35] hover:bg-[#8DDB25] text-[#080A0D] font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_0_25px_rgba(183,255,53,0.3)]"
+            className="inline-flex items-center gap-3 bg-[#B7FF35] hover:bg-[#8DDB25] text-[#080A0D] font-heading font-extrabold text-xs uppercase tracking-wider px-8 py-3.5 rounded-xl transition-all duration-200 shadow-md hover:-translate-y-0.5"
           >
             <span>GET GYM PROGRESS OS — ₹{PRODUCT.price}</span>
             <ArrowRight className="w-4 h-4" />

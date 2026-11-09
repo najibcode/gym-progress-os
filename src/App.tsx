@@ -1,15 +1,12 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { ProblemSection } from './components/ProblemSection';
-import { ProductIntro } from './components/ProductIntro';
+import { TransformationSection } from './components/TransformationSection';
 import { Features } from './components/Features';
 import { InteractiveCalculator } from './components/InteractiveCalculator';
 import { ScreenshotGallery } from './components/ScreenshotGallery';
 import { HowItWorks } from './components/HowItWorks';
-import { AudienceSection } from './components/AudienceSection';
 import { ProductPricing } from './components/ProductPricing';
-import { Comparison } from './components/Comparison';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
@@ -21,53 +18,45 @@ export const App: React.FC = () => {
       {/* 1. Sticky Navigation Bar */}
       <Navbar />
 
-      {/* Main Content Sections */}
+      {/* Main Conversion Flow */}
       <main id="main-content">
-        {/* 2. Hero Section */}
+        {/* 2. Hero Section (Hook + Live Interactive Dashboard Mockup) */}
         <Hero />
 
-        {/* 3. The Problem — Why Most People Don't Track Progress */}
-        <ProblemSection />
+        {/* 3. The Core Transformation (Random Notes vs. Structured Progress) */}
+        <TransformationSection />
 
-        {/* 4. Introducing GYM PROGRESS OS */}
-        <ProductIntro />
-
-        {/* 5. Product Features (Confirmed capabilities & sheets) */}
+        {/* 4. Product Capabilities (15 Interlinked Worksheets) */}
         <Features />
 
-        {/* Bonus Live CRO Tool: Interactive Plate & Warm-up Calculator (Sheet 7) */}
-        <InteractiveCalculator />
+        {/* 5. Live Interactive Preview (Plate & Warm-Up Ramp Tool) */}
+        <div id="interactive-preview">
+          <InteractiveCalculator />
+        </div>
 
-        {/* 6. Product Screenshot Gallery with Lightbox */}
+        {/* 6. Product Screenshot Gallery & Lightbox */}
         <ScreenshotGallery />
 
         {/* 7. How It Works (3 Simple Steps) */}
         <HowItWorks />
 
-        {/* 8. Who Is It For? (Audience breakdowns) */}
-        <AudienceSection />
-
-        {/* 9. What You Get & Price Card */}
+        {/* 8. What You Get & High-Converting Price Card (₹199) */}
         <ProductPricing />
 
-        {/* 10. Comparison Section (Random Notes vs GYM PROGRESS OS) */}
-        <Comparison />
-
-        {/* 11. Objection Handling & FAQ Accordion */}
+        {/* 9. Objection Handling & FAQ Accordion (Top 6 Concerns) */}
         <FAQ />
 
-        {/* 12. Final Conversion Section */}
+        {/* 10. Final Punchy Conversion CTA */}
         <FinalCTA />
       </main>
 
-      {/* 13. Footer */}
+      {/* 11. Footer & Policies */}
       <Footer />
 
-      {/* Mobile Sticky Bottom Purchase Bar */}
+      {/* 12. Persistent Mobile Sticky CTA Bar */}
       <StickyMobileCTA />
     </div>
   );
 };
 
 export default App;
-
