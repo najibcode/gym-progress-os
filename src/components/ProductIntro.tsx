@@ -12,25 +12,25 @@ export const ProductIntro: React.FC = () => {
   const stages = [
     {
       title: '01. Raw Logging Input',
-      desc: 'You enter just three numbers: Weight, Reps, and Reps In Reserve (RIR).',
+      desc: 'You enter just three numbers: Weight, Reps, and Reps in Reserve.',
       tag: 'Zero Friction',
       preview: {
-        title: 'Central Workout Log',
+        title: 'Daily Workout Log',
         rows: [
-          { col1: 'Bench Press', col2: 'Chest', col3: '80.0 kg', col4: '6 reps', col5: 'RIR 1' },
-          { col1: 'Incline DB Press', col2: 'Chest', col3: '32.0 kg', col4: '8 reps', col5: 'RIR 2' },
-          { col1: 'Barbell Row', col2: 'Back', col3: '75.0 kg', col4: '8 reps', col5: 'RIR 2' },
+          { col1: 'Bench Press', col2: 'Chest', col3: '80.0 kg', col4: '6 reps', col5: '1 Rep Left' },
+          { col1: 'Incline DB Press', col2: 'Chest', col3: '32.0 kg', col4: '8 reps', col5: '2 Reps Left' },
+          { col1: 'Barbell Row', col2: 'Back', col3: '75.0 kg', col4: '8 reps', col5: '2 Reps Left' },
         ],
       },
     },
     {
       title: '02. Real-Time Math Engine',
-      desc: 'Formulas cross-reference the Exercise Library and calculate volume & estimated 1RM instantly.',
+      desc: 'Formulas check the Exercise Library and calculate total volume & estimated max lifts instantly.',
       tag: '100% Automated',
       preview: {
         title: 'Formula Processor',
         formulas: [
-          { name: 'Estimated 1RM (e1RM)', formula: '= Weight * (1 + Reps / 30)', result: '96.0 kg' },
+          { name: 'Estimated Max Lift', formula: '= Weight * (1 + Reps / 30)', result: '96.0 kg' },
           { name: 'Set Volume Load', formula: '= Weight * Reps * Sets', result: '1,440 kg' },
           { name: 'Muscle Group Lookup', formula: '= XLOOKUP(Exercise, Library, MuscleGroup)', result: 'Chest' },
         ],
@@ -43,16 +43,16 @@ export const ProductIntro: React.FC = () => {
       preview: {
         title: 'Overload Comparator',
         comparison: [
-          { metric: 'First Session e1RM', val: '76.7 kg', date: 'Session 1' },
-          { metric: 'Latest Session e1RM', val: '80.0 kg', date: 'Session 12' },
+          { metric: 'First Session Max Lift', val: '76.7 kg', date: 'Session 1' },
+          { metric: 'Latest Session Max Lift', val: '80.0 kg', date: 'Session 12' },
           { metric: 'Net Strength Gain', val: '+4.3 kg (+5.6%)', status: 'Upward Trend' },
-          { metric: 'Suggested Next Load', val: '82.5 kg (+2.5 kg)', status: 'Auto-Calculated' },
+          { metric: 'Suggested Next Weight', val: '82.5 kg (+2.5 kg)', status: 'Auto-Calculated' },
         ],
       },
     },
     {
       title: '04. Executive Dashboard & AI Prompt',
-      desc: 'Rolls up weekly sets per muscle group and formats data ready for ChatGPT/Claude analysis.',
+      desc: 'Summarizes weekly sets per muscle group and formats data ready for ChatGPT/Claude analysis.',
       tag: 'Intelligence Hub',
       preview: {
         title: 'Weekly AI Analysis Generator',
@@ -150,7 +150,7 @@ export const ProductIntro: React.FC = () => {
                           <th className="pb-2">Muscle</th>
                           <th className="pb-2">Weight</th>
                           <th className="pb-2">Reps</th>
-                          <th className="pb-2">RIR</th>
+                          <th className="pb-2">Effort</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-[#28312C]/40 text-[#F5F7F2]">
@@ -224,7 +224,7 @@ export const ProductIntro: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2 text-[11px] font-mono text-[#737D76]">
                     <Sparkles className="w-3.5 h-3.5 text-[#B7FF35]" />
-                    <span>Includes weekly volume tables, fatigue scores, and RIR deviations.</span>
+                    <span>Includes weekly volume tables, recovery scores, and workout metrics.</span>
                   </div>
                 </div>
               )}

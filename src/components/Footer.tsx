@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck, FileSpreadsheet } from 'lucide-react';
 import { PRODUCT, handleCheckoutRedirect } from '../constants/product';
 import { LegalModal } from './LegalModal';
 import { BrandLogo } from './BrandLogo';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 export const Footer: React.FC = () => {
   const [legalModalType, setLegalModalType] = useState<'privacy' | 'terms' | 'refund' | 'contact' | null>(null);
@@ -35,27 +36,62 @@ export const Footer: React.FC = () => {
               </div>
               <ul className="space-y-2">
                 <li>
-                  <a href="#features" className="hover:text-[#B7FF35] transition-colors">
+                  <a
+                    href="#features"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo('#features');
+                    }}
+                    className="hover:text-[#B7FF35] transition-colors cursor-pointer"
+                  >
                     Core Features
                   </a>
                 </li>
                 <li>
-                  <a href="#preview" className="hover:text-[#B7FF35] transition-colors">
-                    Workbook Preview
+                  <a
+                    href="#interactive-preview"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo('#interactive-preview');
+                    }}
+                    className="hover:text-[#B7FF35] transition-colors cursor-pointer"
+                  >
+                    Live Preview Tool
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="hover:text-[#B7FF35] transition-colors">
+                  <a
+                    href="#how-it-works"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo('#how-it-works');
+                    }}
+                    className="hover:text-[#B7FF35] transition-colors cursor-pointer"
+                  >
                     How It Works
                   </a>
                 </li>
                 <li>
-                  <a href="#pricing" className="hover:text-[#B7FF35] transition-colors">
+                  <a
+                    href="#pricing"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo('#pricing');
+                    }}
+                    className="hover:text-[#B7FF35] transition-colors cursor-pointer"
+                  >
                     What’s Included
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="hover:text-[#B7FF35] transition-colors">
+                  <a
+                    href="#faq"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo('#faq');
+                    }}
+                    className="hover:text-[#B7FF35] transition-colors cursor-pointer"
+                  >
                     Frequently Asked Questions
                   </a>
                 </li>

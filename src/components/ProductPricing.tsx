@@ -6,15 +6,15 @@ export const ProductPricing: React.FC = () => {
   const inclusions = [
     "GYM PROGRESS OS Ultimate Edition (.xlsx workbook)",
     "Executive Analytics Dashboard (Volume & 8-lift strength radar)",
-    "Set-by-Set Workout Log with automatic volume math",
-    "Automated Progressive Overload Engine & Load Suggester",
-    "All-Time Personal Records (PR) Scoreboard & e1RM detector",
-    "Weekly Workout Split & 4-Week Mesocycle Planner",
-    "Plate & 5-Stage Warm-Up Ramp Calculator",
+    "Daily Workout Log with automatic weight & volume math",
+    "Automated Progressive Overload Engine & Next Weight Suggester",
+    "All-Time Personal Records (PR) Board & best lift detector",
+    "Weekly Workout Split & 4-Week Workout Planner",
+    "Plate & 5-Step Warm-Up Plan Calculator",
     "Pre-Configured Exercise Library (Compound & Isolation)",
-    "Bodyweight, Circumference & BMI Tracker",
-    "Nutrition & Dynamic Protein Scaling Tracker",
-    "Recovery & Readiness Scorecard (0–100 daily index)",
+    "Bodyweight, Body Measurements & BMI Tracker",
+    "Nutrition & Daily Protein Target Tracker",
+    "Sleep, Recovery & Energy Scorecard (0–100 daily score)",
     "Weekly AI Analysis Prompt (for ChatGPT & Claude)",
     "Full compatibility with Microsoft Excel & Google Sheets",
     "Lifetime personal license with 100% offline privacy",
@@ -40,7 +40,7 @@ export const ProductPricing: React.FC = () => {
             EVERYTHING INSIDE <span className="text-[#B7FF35]">GYM PROGRESS OS.</span>
           </h2>
           <p className="mt-4 text-base text-[#A1AAA3] max-w-xl mx-auto">
-            Zero hidden fees. Zero recurring monthly charges. Own the complete 15-worksheet fitness architecture for less than the price of a single protein shake.
+            Zero hidden fees. Zero recurring monthly charges. Get the complete 15-sheet workout tracker for less than the price of a single protein shake.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export const ProductPricing: React.FC = () => {
                   15 Worksheets. Fully Automated.
                 </h3>
                 <p className="text-sm text-[#A1AAA3] mt-2 leading-relaxed">
-                  Every formula is pre-built and cross-referenced. You get immediate access to the full, unlocked spreadsheet file with zero restrictions.
+                  Every formula is pre-built and connected together. You get immediate access to the full, unlocked spreadsheet file with zero restrictions.
                 </p>
               </div>
 

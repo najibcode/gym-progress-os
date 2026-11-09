@@ -17,13 +17,13 @@ export const TransformationSection: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#151B21] border border-[#28312C] text-[#B7FF35] text-xs font-mono font-semibold uppercase tracking-wider mb-3">
             <TrendingUp className="w-3.5 h-3.5 text-[#B7FF35]" />
-            <span>THE REALITY OF GYM PROGRESS</span>
+            <span>THE REAL TRUTH ABOUT GYM RESULTS</span>
           </div>
           <h2 className="font-heading font-extrabold text-2xl sm:text-4xl lg:text-5xl text-[#F5F7F2] uppercase tracking-tight leading-tight">
-            WHY MOST PEOPLE <span className="text-[#B7FF35]">PLATEAU.</span>
+            WHY MOST LIFTERS <span className="text-[#B7FF35]">STOP MAKING GAINS.</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#A1AAA3]">
-            Effort without measurement leads to wasted months. See what happens when you replace scattered notes with a quantifiable tracking system.
+            Working out hard without tracking your numbers leads to wasted months. See what happens when you replace messy notes with a clear, organized workout tracker.
           </p>
         </div>
 
@@ -43,32 +43,32 @@ export const TransformationSection: React.FC = () => {
                   </h3>
                 </div>
                 <span className="text-[11px] font-mono text-[#FF5F56] bg-[#FF5F56]/10 px-2.5 py-0.5 rounded border border-[#FF5F56]/20 font-bold">
-                  Stalled Gains
+                  Getting Stuck
                 </span>
               </div>
 
               <ul className="space-y-4 text-xs sm:text-sm text-[#A1AAA3]">
                 <li className="flex items-start gap-3">
                   <X className="w-4 h-4 text-[#FF5F56] shrink-0 mt-0.5" />
-                  <span><strong>Guessing last week’s weights:</strong> You forget what you lifted, resulting in zero progressive overload.</span>
+                  <span><strong>Guessing last week’s weights:</strong> You forget what you lifted, so you lift the same weight over and over.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <X className="w-4 h-4 text-[#FF5F56] shrink-0 mt-0.5" />
-                  <span><strong>Scattered logs:</strong> Workout details are lost across Apple Notes, paper scraps, or text messages.</span>
+                  <span><strong>Scattered logs:</strong> Your workout numbers are lost in phone notes, WhatsApp chats, or torn pieces of paper.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <X className="w-4 h-4 text-[#FF5F56] shrink-0 mt-0.5" />
-                  <span><strong>No volume or 1RM math:</strong> You train hard but have no idea if your total weekly volume is increasing.</span>
+                  <span><strong>No simple math:</strong> You train hard, but you have no easy way to know if you are actually lifting more weight over time.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <X className="w-4 h-4 text-[#FF5F56] shrink-0 mt-0.5" />
-                  <span><strong>Subscription trap:</strong> Generic fitness apps demand ₹800+/month just to log basic sets.</span>
+                  <span><strong>Expensive monthly apps:</strong> Fitness apps want ₹800+ every month just to let you log simple gym sets.</span>
                 </li>
               </ul>
             </div>
 
             <div className="mt-6 pt-4 border-t border-[#28312C]/60 text-[11px] font-mono text-[#737D76]">
-              Result: Inconsistent progress and wasted gym effort.
+              Result: You stay at the exact same weights for months.
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export const TransformationSection: React.FC = () => {
                   </h3>
                 </div>
                 <span className="text-[11px] font-mono text-[#B7FF35] bg-[#B7FF35]/10 px-2.5 py-0.5 rounded border border-[#B7FF35]/20 font-bold">
-                  Predictable Results
+                  Steady Progress
                 </span>
               </div>
 
@@ -100,32 +100,32 @@ export const TransformationSection: React.FC = () => {
                   <div className="w-4 h-4 rounded-full bg-[#B7FF35]/20 flex items-center justify-center text-[#B7FF35] shrink-0 mt-0.5">
                     <Check className="w-3 h-3" />
                   </div>
-                  <span><strong>Automated progressive overload:</strong> Instantly compares your baseline to current lifts with suggested next loads.</span>
+                  <span><strong>Automatic strength tracking:</strong> Compares your lifts week by week and tells you what weight to aim for in your next workout.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-[#B7FF35]/20 flex items-center justify-center text-[#B7FF35] shrink-0 mt-0.5">
                     <Check className="w-3 h-3" />
                   </div>
-                  <span><strong>One clean workbook:</strong> 15 automated worksheets interlinked in one offline `.xlsx` spreadsheet.</span>
+                  <span><strong>One clean Excel file:</strong> All 15 sheets are already set up and linked together so you don't have to build any formulas.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-[#B7FF35]/20 flex items-center justify-center text-[#B7FF35] shrink-0 mt-0.5">
                     <Check className="w-3 h-3" />
                   </div>
-                  <span><strong>Live PR leaderboard:</strong> Automatic estimated 1-Rep Max (e1RM) and volume tracking for every set.</span>
+                  <span><strong>Personal records board:</strong> Automatically remembers your heaviest lift and best reps for every exercise.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-[#B7FF35]/20 flex items-center justify-center text-[#B7FF35] shrink-0 mt-0.5">
                     <Check className="w-3 h-3" />
                   </div>
-                  <span><strong>₹199 one-time investment:</strong> No monthly subscription fees. Keep and use it on your devices forever.</span>
+                  <span><strong>₹199 one-time payment:</strong> No monthly subscription fees. Keep and use it on your phone or laptop forever.</span>
                 </li>
               </ul>
             </div>
 
             <div className="mt-6 pt-4 border-t border-[#28312C]/60 flex items-center justify-between">
               <span className="text-[11px] font-mono text-[#45D483] font-medium">
-                ✓ Full Microsoft Excel & Google Sheets support
+                ✓ Works on Microsoft Excel & Google Sheets
               </span>
               <span className="text-xs font-mono font-bold text-[#B7FF35]">
                 ₹{PRODUCT.price} Only
@@ -142,7 +142,7 @@ export const TransformationSection: React.FC = () => {
             onClick={() => handleCheckoutRedirect('transformation_section_cta')}
             className="inline-flex items-center gap-2 bg-[#B7FF35] hover:bg-[#8DDB25] text-[#080A0D] font-heading font-extrabold text-xs uppercase tracking-wider px-7 py-3.5 rounded-xl transition-all duration-200 shadow-md hover:-translate-y-0.5"
           >
-            <span>SWITCH TO STRUCTURED TRACKING — ₹{PRODUCT.price}</span>
+            <span>START TRACKING YOUR WORKOUTS — ₹{PRODUCT.price}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
@@ -151,3 +151,4 @@ export const TransformationSection: React.FC = () => {
     </section>
   );
 };
+

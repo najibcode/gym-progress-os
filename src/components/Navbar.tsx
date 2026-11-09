@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
 import { PRODUCT, handleCheckoutRedirect } from '../constants/product';
 import { BrandLogo } from './BrandLogo';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,6 +23,15 @@ export const Navbar: React.FC = () => {
     { name: 'FAQ', href: '#faq' },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      smoothScrollTo(href);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -35,7 +45,8 @@ export const Navbar: React.FC = () => {
           {/* Official Brand Logo */}
           <a
             href="#"
-            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF35] rounded-xl"
+            onClick={(e) => handleNavClick(e, '#')}
+            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7FF35] rounded-xl cursor-pointer"
             aria-label="Progress Lab / Progress Club - Home"
           >
             <BrandLogo size="md" />
@@ -47,7 +58,8 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs lg:text-sm font-medium text-[#A1AAA3] hover:text-[#B7FF35] transition-colors focus:outline-none focus-visible:text-[#B7FF35]"
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-xs lg:text-sm font-medium text-[#A1AAA3] hover:text-[#B7FF35] transition-colors focus:outline-none focus-visible:text-[#B7FF35] cursor-pointer"
               >
                 {link.name}
               </a>
@@ -85,8 +97,11 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium text-[#A1AAA3] hover:text-[#B7FF35] py-2 px-3 rounded-md hover:bg-[#151B21] transition-colors"
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  handleNavClick(e, link.href);
+                }}
+                className="text-sm font-medium text-[#A1AAA3] hover:text-[#B7FF35] py-2 px-3 rounded-md hover:bg-[#151B21] transition-colors cursor-pointer"
               >
                 {link.name}
               </a>

@@ -7,6 +7,7 @@ interface FeatureModulePreviewProps {
 
 export const FeatureModulePreview: React.FC<FeatureModulePreviewProps> = ({ moduleName }) => {
   switch (moduleName) {
+    case 'Daily Workout Log':
     case 'Central Workout Log':
       return (
         <div className="bg-[#101419] border border-[#28312C] rounded-xl p-5 space-y-4 font-mono text-xs">
@@ -20,10 +21,10 @@ export const FeatureModulePreview: React.FC<FeatureModulePreviewProps> = ({ modu
 
           <div className="space-y-2">
             {[
-              { ex: 'Barbell Bench Press', set: 'Set 1', load: '80.0 kg', reps: '8 reps', rir: 'RIR 2', vol: '640 kg' },
-              { ex: 'Barbell Bench Press', set: 'Set 2', load: '80.0 kg', reps: '8 reps', rir: 'RIR 2', vol: '640 kg' },
-              { ex: 'Barbell Bench Press', set: 'Set 3', load: '82.5 kg', reps: '6 reps', rir: 'RIR 1', vol: '495 kg' },
-              { ex: 'Incline DB Press', set: 'Set 1', load: '32.0 kg', reps: '10 reps', rir: 'RIR 2', vol: '320 kg' },
+              { ex: 'Barbell Bench Press', set: 'Set 1', load: '80.0 kg', reps: '8 reps', rir: '2 Reps Left', vol: '640 kg' },
+              { ex: 'Barbell Bench Press', set: 'Set 2', load: '80.0 kg', reps: '8 reps', rir: '2 Reps Left', vol: '640 kg' },
+              { ex: 'Barbell Bench Press', set: 'Set 3', load: '82.5 kg', reps: '6 reps', rir: '1 Rep Left', vol: '495 kg' },
+              { ex: 'Incline DB Press', set: 'Set 1', load: '32.0 kg', reps: '10 reps', rir: '2 Reps Left', vol: '320 kg' },
             ].map((row, i) => (
               <div key={i} className="flex items-center justify-between p-2.5 rounded-lg bg-[#151B21] border border-[#28312C]">
                 <div>
@@ -65,12 +66,12 @@ export const FeatureModulePreview: React.FC<FeatureModulePreviewProps> = ({ modu
               <div className="text-[10px] text-[#A1AAA3] mt-1">9 Sets Logged</div>
             </div>
             <div className="bg-[#151B21] p-3 rounded-lg border border-[#28312C]">
-              <span className="text-[10px] text-[#737D76] uppercase">First Logged e1RM</span>
+              <span className="text-[10px] text-[#737D76] uppercase">Starting Max Lift</span>
               <div className="font-bold text-[#A1AAA3] text-sm mt-0.5">76.7 kg</div>
-              <div className="text-[10px] text-[#737D76] mt-1">Session 1 Baseline</div>
+              <div className="text-[10px] text-[#737D76] mt-1">Session 1 Start</div>
             </div>
             <div className="bg-[#151B21] p-3 rounded-lg border border-[#28312C]">
-              <span className="text-[10px] text-[#737D76] uppercase">Latest Session e1RM</span>
+              <span className="text-[10px] text-[#737D76] uppercase">Current Max Lift</span>
               <div className="font-bold text-[#B7FF35] text-sm mt-0.5">80.0 kg</div>
               <div className="text-[10px] text-[#45D483] mt-1">+3.3 kg (+4.3%)</div>
             </div>
@@ -112,7 +113,7 @@ export const FeatureModulePreview: React.FC<FeatureModulePreviewProps> = ({ modu
                   <div className="text-[10px] text-[#737D76]">Peak: {pr.wt} × {pr.reps}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-[#B7FF35] font-bold">e1RM: {pr.e1rm}</div>
+                  <div className="text-[#B7FF35] font-bold">Est. Max: {pr.e1rm}</div>
                   <div className="text-[9px] text-[#45D483]">Auto-Detected PR</div>
                 </div>
               </div>
@@ -185,17 +186,17 @@ export const FeatureModulePreview: React.FC<FeatureModulePreviewProps> = ({ modu
           </div>
 
           <div className="space-y-1.5">
-            <div className="text-[10px] text-[#737D76] uppercase">Warm-Up Ramp Protocol:</div>
+            <div className="text-[10px] text-[#737D76] uppercase">Warm-Up Steps:</div>
             <div className="text-[11px] text-[#A1AAA3] flex items-center justify-between p-1.5 bg-[#151B21] rounded">
-              <span>Set 1 (Bar)</span>
+              <span>Set 1 (Empty Bar)</span>
               <span className="text-[#F5F7F2]">20 kg × 10 reps</span>
             </div>
             <div className="text-[11px] text-[#A1AAA3] flex items-center justify-between p-1.5 bg-[#151B21] rounded">
-              <span>Set 2 (Ramp 60%)</span>
+              <span>Set 2 (Light 60%)</span>
               <span className="text-[#F5F7F2]">60 kg × 5 reps</span>
             </div>
             <div className="text-[11px] text-[#A1AAA3] flex items-center justify-between p-1.5 bg-[#151B21] rounded">
-              <span>Set 3 (Primer 80%)</span>
+              <span>Set 3 (Heavy Warm-Up 80%)</span>
               <span className="text-[#B7FF35] font-bold">80 kg × 2 reps</span>
             </div>
           </div>
@@ -210,17 +211,17 @@ export const FeatureModulePreview: React.FC<FeatureModulePreviewProps> = ({ modu
               <Layers className="w-4 h-4 text-[#B7FF35]" />
               <span>Sheet: {moduleName}</span>
             </span>
-            <span className="text-[#45D483] text-[10px]">● Operational</span>
+            <span className="text-[#45D483] text-[10px]">● Ready to Use</span>
           </div>
 
           <div className="bg-[#151B21] p-4 rounded-xl border border-[#28312C] space-y-3">
-            <div className="text-xs text-[#F5F7F2] font-semibold">Specialized Fitness Architecture</div>
+            <div className="text-xs text-[#F5F7F2] font-semibold">All Sheets Work Together Automatically</div>
             <p className="text-[11px] text-[#A1AAA3] leading-relaxed">
-              Fully cross-referenced with your daily workout entries. Changes in bodyweight automatically scale daily protein recommendations; daily sleep logs calculate your readiness index.
+              Everything is linked together. When you enter your workouts, your strength numbers, personal bests, and weekly totals update by themselves.
             </p>
             <div className="flex items-center gap-2 text-[10px] text-[#B7FF35]">
               <Check className="w-3.5 h-3.5 text-[#B7FF35]" />
-              <span>100% pre-coded Excel formulas • Zero setup required</span>
+              <span>100% pre-built Excel formulas • Zero setup required</span>
             </div>
           </div>
         </div>

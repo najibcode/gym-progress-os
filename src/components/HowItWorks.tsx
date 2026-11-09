@@ -16,13 +16,13 @@ export const HowItWorks: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#151B21] border border-[#28312C] text-[#B7FF35] text-xs font-mono font-medium tracking-wider uppercase mb-4">
-            <span>FRICTIONLESS SETUP</span>
+            <span>EASY 3-STEP START</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#F5F7F2] uppercase tracking-tight leading-tight">
             GET STARTED IN <span className="text-[#B7FF35]">3 SIMPLE STEPS.</span>
           </h2>
           <p className="mt-4 text-base text-[#A1AAA3] max-w-xl mx-auto">
-            From checkout to your first logged session in less than 2 minutes. No account creation, no password setups, no bloatware.
+            Start logging your workouts in less than 2 minutes. No account creation, no complicated setup, and no passwords needed.
           </p>
         </div>
 

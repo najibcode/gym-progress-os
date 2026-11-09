@@ -24,10 +24,10 @@ export const InteractiveCalculator: React.FC = () => {
   // 5-Stage Warm-Up Ramp (Matches Sheet 7 in workbook)
   const warmUpRamp = [
     { stage: "Set 1 (Empty Bar)", percent: "0%", weight: barWeight, reps: "10 reps" },
-    { stage: "Set 2 (Warm-up)", percent: "40%", weight: Math.round((barWeight + (targetWeight - barWeight) * 0.4) / 2.5) * 2.5, reps: "6 reps" },
-    { stage: "Set 3 (Ramp)", percent: "60%", weight: Math.round((barWeight + (targetWeight - barWeight) * 0.6) / 2.5) * 2.5, reps: "4 reps" },
-    { stage: "Set 4 (Primer)", percent: "80%", weight: Math.round((barWeight + (targetWeight - barWeight) * 0.8) / 2.5) * 2.5, reps: "2 reps" },
-    { stage: "Working Sets", percent: "100%", weight: targetWeight, reps: "Work Target" },
+    { stage: "Set 2 (Light Warm-up)", percent: "40%", weight: Math.round((barWeight + (targetWeight - barWeight) * 0.4) / 2.5) * 2.5, reps: "6 reps" },
+    { stage: "Set 3 (Medium Set)", percent: "60%", weight: Math.round((barWeight + (targetWeight - barWeight) * 0.6) / 2.5) * 2.5, reps: "4 reps" },
+    { stage: "Set 4 (Heavy Warm-up)", percent: "80%", weight: Math.round((barWeight + (targetWeight - barWeight) * 0.8) / 2.5) * 2.5, reps: "2 reps" },
+    { stage: "Working Sets", percent: "100%", weight: targetWeight, reps: "Main Work" },
   ];
 
   return (
@@ -143,11 +143,11 @@ export const InteractiveCalculator: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Flame className="w-4 h-4 text-[#FFB547]" />
                   <span className="font-heading font-bold text-sm text-[#F5F7F2] uppercase">
-                    5-Stage Warm-Up Ramp
+                    5-Step Warm-Up Plan
                   </span>
                 </div>
                 <span className="text-[11px] font-mono text-[#45D483] bg-[#45D483]/10 px-2 py-0.5 rounded border border-[#45D483]/20">
-                  Injury Prevention
+                  Warm Up Right
                 </span>
               </div>
 

@@ -30,7 +30,7 @@ export const Features: React.FC = () => {
             EVERYTHING YOU NEED TO <span className="text-[#B7FF35]">TRACK YOUR TRAINING.</span>
           </h2>
           <p className="mt-4 text-base text-[#A1AAA3] max-w-2xl mx-auto">
-            Engineered from ground-truth biomechanics and strength training principles. Every worksheet serves a specific purpose in your training progression.
+            Built on proven gym principles. Every sheet gives you exactly what you need to track weights, lift heavier, and see real results week after week.
           </p>
         </div>
 

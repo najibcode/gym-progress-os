@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2, Shield, Sparkles, Database } from 'lucide-react';
 import { PRODUCT, CORE_BENEFITS, handleCheckoutRedirect } from '../constants/product';
 import { LiveDashboardMockup } from './LiveDashboardMockup';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 export const Hero: React.FC = () => {
   return (
@@ -73,7 +74,11 @@ export const Hero: React.FC = () => {
 
               <a
                 href="#features"
-                className="inline-flex items-center justify-center gap-2 bg-[#151B21] hover:bg-[#1B232B] text-[#A1AAA3] hover:text-[#F5F7F2] border border-[#28312C] hover:border-[#35423B] font-heading font-semibold text-xs uppercase tracking-wider px-6 py-4 rounded-xl transition-all duration-200 text-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothScrollTo('#features');
+                }}
+                className="inline-flex items-center justify-center gap-2 bg-[#151B21] hover:bg-[#1B232B] text-[#A1AAA3] hover:text-[#F5F7F2] border border-[#28312C] hover:border-[#35423B] font-heading font-semibold text-xs uppercase tracking-wider px-6 py-4 rounded-xl transition-all duration-200 text-center cursor-pointer"
               >
                 <span>EXPLORE FEATURES ↓</span>
               </a>

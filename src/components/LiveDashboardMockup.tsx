@@ -15,8 +15,8 @@ export const LiveDashboardMockup: React.FC = () => {
       points: [60, 62.5, 65, 67.5, 70, 72.5, 75, 77.5, 80],
       weeks: ['W1', 'W2', 'W4', 'W6', 'W8', 'W10', 'W12'],
       sets: [
-        { set: 1, weight: '75.0 kg', reps: '8', rir: '2', status: 'Optimal' },
-        { set: 2, weight: '77.5 kg', reps: '6', rir: '1', status: 'Peak' },
+        { set: 1, weight: '75.0 kg', reps: '8', rir: '2', status: 'Clean Form' },
+        { set: 2, weight: '77.5 kg', reps: '6', rir: '1', status: 'Heavy' },
         { set: 3, weight: '80.0 kg', reps: '4', rir: '1', status: 'New PR' },
       ],
     },
@@ -29,8 +29,8 @@ export const LiveDashboardMockup: React.FC = () => {
       points: [90, 95, 100, 105, 110, 115, 120, 122.5, 125],
       weeks: ['W1', 'W2', 'W4', 'W6', 'W8', 'W10', 'W12'],
       sets: [
-        { set: 1, weight: '115.0 kg', reps: '6', rir: '2', status: 'Optimal' },
-        { set: 2, weight: '120.0 kg', reps: '5', rir: '2', status: 'Optimal' },
+        { set: 1, weight: '115.0 kg', reps: '6', rir: '2', status: 'Solid' },
+        { set: 2, weight: '120.0 kg', reps: '5', rir: '2', status: 'Heavy' },
         { set: 3, weight: '125.0 kg', reps: '3', rir: '1', status: 'New PR' },
       ],
     },
@@ -43,7 +43,7 @@ export const LiveDashboardMockup: React.FC = () => {
       points: [110, 115, 120, 127.5, 135, 140, 145, 150, 155],
       weeks: ['W1', 'W2', 'W4', 'W6', 'W8', 'W10', 'W12'],
       sets: [
-        { set: 1, weight: '140.0 kg', reps: '5', rir: '2', status: 'Optimal' },
+        { set: 1, weight: '140.0 kg', reps: '5', rir: '2', status: 'Clean Form' },
         { set: 2, weight: '147.5 kg', reps: '4', rir: '1', status: 'Strong' },
         { set: 3, weight: '155.0 kg', reps: '3', rir: '1', status: 'New PR' },
       ],
@@ -136,7 +136,7 @@ export const LiveDashboardMockup: React.FC = () => {
               88 <span className="text-xs font-mono font-normal text-[#737D76]">/ 100</span>
             </div>
             <div className="text-[10px] text-[#A1AAA3] font-mono font-medium mt-0.5">
-              Optimal Recovery
+              Ready to Train
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ export const LiveDashboardMockup: React.FC = () => {
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
               <div className="text-[10px] font-mono uppercase tracking-wider text-[#737D76]">
-                Automated Overload Engine
+                Automatic Strength Progress
               </div>
               <div className="text-xs font-bold text-[#F5F7F2] flex items-center gap-2 mt-0.5">
                 <span>{current.name}</span>
@@ -262,7 +262,7 @@ export const LiveDashboardMockup: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-2.5">
-                  <span className="text-[10px] text-[#A1AAA3]">RIR {item.rir}</span>
+                  <span className="text-[10px] text-[#A1AAA3]">{item.rir} Reps Left</span>
                   <span
                     className={`text-[9px] font-mono uppercase px-1.5 py-0.5 rounded font-bold ${
                       item.status === 'New PR'

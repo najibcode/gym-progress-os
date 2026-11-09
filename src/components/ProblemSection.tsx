@@ -87,7 +87,7 @@ export const ProblemSection: React.FC = () => {
             “Your effort deserves a system that keeps up with it.”
           </p>
           <p className="text-sm text-[#A1AAA3] mb-6 max-w-lg mx-auto">
-            Stop guessing weights or hoping you improved. Replace scattered notes with a quantifiable Excel framework designed specifically for progressive overload.
+            Stop guessing weights or hoping you improved. Replace scattered notes with a simple, organized Excel tracker designed specifically to help you lift heavier over time.
           </p>
           <button
             onClick={() => handleCheckoutRedirect('problem_section_cta')}
