@@ -1,5 +1,17 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gymos.progresslab.in/sitemap.xml
+# Social media and search bot crawlers
+User-agent: Facebot
+Allow: /
 
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://gym-progress-os.vercel.app/sitemap.xml

@@ -13,6 +13,21 @@ import { Footer } from './components/Footer';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
 
 export const App: React.FC = () => {
+  React.useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'ViewContent', {
+          content_name: 'GYM PROGRESS OS — Ultimate Edition',
+          content_category: 'Digital Fitness Tool',
+          currency: 'INR',
+          value: 199,
+        });
+      }
+    } catch {
+      // safe fallback
+    }
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-[#080A0D] text-[#F5F7F2] font-sans antialiased overflow-x-hidden selection:bg-[#B7FF35] selection:text-[#080A0D]">
       {/* 1. Sticky Navigation Bar */}
